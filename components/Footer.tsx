@@ -60,7 +60,7 @@ export default function Footer() {
                 <span className="text-sm">harshiljoshi1410@gmail.com</span>
               </a>
               <a
-                href="https://linkedin.com/in/harshil-joshi"
+                href="https://linkedin.com/in/harshil-joshi-50980a32a"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors duration-300 group"
@@ -69,7 +69,7 @@ export default function Footer() {
                 <span className="text-sm">LinkedIn Profile</span>
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/harshiljoshi-1410"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors duration-300 group"
