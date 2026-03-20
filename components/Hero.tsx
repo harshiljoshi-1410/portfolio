@@ -83,7 +83,7 @@ export default function Hero() {
               <span className="sm:hidden">Email</span>
             </a>
             <span className="hidden sm:block">•</span>
-            <a href="https://linkedin.com/in/harshil-joshi" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors duration-300">
+            <a href="https://linkedin.com/in/harshil-joshi-141006HJ" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors duration-300">
               <Linkedin size={16} />
               <span>LinkedIn</span>
             </a>
