@@ -55,8 +55,8 @@ export default function CADSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.15, duration: 0.6 }}
-              whileHover={{ scale: 1.05, y: -10 }}
-              className="group relative p-8 rounded-2xl border border-slate-700/50 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-sm transition-all duration-500 hover:border-blue-400/60 hover:shadow-lg hover:shadow-blue-500/20 overflow-hidden cursor-pointer"
+              whileHover={{ scale: 1.04, y: -8 }}
+              className="reveal group relative p-8 glass-card bg-gradient-to-br from-blue-500/10 to-cyan-500/10 overflow-hidden cursor-pointer"
             >
               {/* Animated border gradient on hover */}
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 -z-10" />
@@ -75,7 +75,7 @@ export default function CADSection() {
                 </ul>
 
                 <div className="pt-2">
-                  <span className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/30">
+                  <span className="inline-block px-3 py-1 text-xs font-medium rounded-full glass text-blue-300 border-0">
                     {project.tag}
                   </span>
                 </div>

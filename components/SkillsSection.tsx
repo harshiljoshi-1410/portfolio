@@ -83,15 +83,15 @@ export default function SkillsSection() {
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-3 reveal">
           {filters.map((filter) => (
             <button
               key={filter.value}
               onClick={() => setActiveFilter(filter.value)}
-              className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm ${
+              className={`px-4 py-2 rounded-xl font-medium transition-all duration-300 text-sm ${
                 activeFilter === filter.value
-                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
-                  : 'bg-slate-800/50 text-slate-400 hover:text-white border border-slate-700/50 hover:border-slate-600'
+                  ? 'btn-gradient-cyan shadow-lg'
+                  : 'glass text-slate-400 hover:text-white'
               }`}
             >
               {filter.label}
@@ -104,7 +104,7 @@ export default function SkillsSection() {
           {filtered.map((cred, idx) => (
             <article
               key={idx}
-              className={`group relative p-8 rounded-2xl border border-slate-700/50 bg-gradient-to-br ${cred.color} backdrop-blur-sm transition-all duration-500 hover:border-slate-600 hover:shadow-lg overflow-hidden`}
+              className={`reveal reveal-delay-${(idx % 4) + 1} group relative p-8 glass-card bg-gradient-to-br ${cred.color} overflow-hidden`}
             >
               {/* Hover background */}
               <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${cred.color} -z-10 rounded-2xl`} />
@@ -119,7 +119,7 @@ export default function SkillsSection() {
                   {cred.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="px-2 py-1 text-xs rounded-md bg-slate-800/50 text-slate-300 border border-slate-700/50 group-hover:border-slate-600 transition-colors duration-300"
+                      className="px-2 py-1 text-xs rounded-md glass text-slate-300 border-0"
                     >
                       {tag}
                     </span>
@@ -128,10 +128,10 @@ export default function SkillsSection() {
 
                 {/* Action */}
                 <div className="pt-4 flex gap-2">
-                  <button className="px-4 py-2 text-xs font-medium rounded-lg bg-slate-800/50 text-slate-300 border border-slate-700/50 hover:border-slate-600 hover:text-white transition-all duration-300">
+                  <button className="px-4 py-2 text-xs font-medium rounded-lg glass text-slate-300 hover:text-white transition-all duration-300">
                     Preview
                   </button>
-                  <button className="px-4 py-2 text-xs font-medium rounded-lg bg-slate-800/50 text-slate-300 border border-slate-700/50 hover:border-slate-600 hover:text-white transition-all duration-300">
+                  <button className="px-4 py-2 text-xs font-medium rounded-lg glass text-slate-300 hover:text-white transition-all duration-300">
                     Download
                   </button>
                 </div>

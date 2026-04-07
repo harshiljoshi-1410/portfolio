@@ -61,8 +61,8 @@ export default function IoTSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.15, duration: 0.6 }}
-              whileHover={{ scale: 1.05, y: -10 }}
-              className="group relative h-full p-8 rounded-2xl border border-slate-700/50 bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-sm transition-all duration-500 hover:border-green-400/60 hover:shadow-lg hover:shadow-green-500/20 overflow-hidden flex flex-col cursor-pointer"
+              whileHover={{ scale: 1.04, y: -8 }}
+              className="reveal group relative h-full p-8 glass-card bg-gradient-to-br from-green-500/10 to-emerald-500/10 overflow-hidden flex flex-col cursor-pointer"
             >
               {/* Gradient background on hover */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-green-500/20 to-emerald-500/20 -z-10 rounded-2xl" />
@@ -77,7 +77,7 @@ export default function IoTSection() {
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-2 py-1 text-xs rounded-md bg-slate-800/50 text-slate-300 border border-slate-700/50"
+                      className="px-2 py-1 text-xs rounded-md glass text-slate-300 border-0"
                     >
                       {tech}
                     </span>

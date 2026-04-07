@@ -41,15 +41,15 @@ export default function Header() {
   ]
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-slate-950/90 backdrop-blur-lg border-b border-slate-700' : 'bg-slate-950/50 backdrop-blur-sm border-b border-slate-800/30'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'glass-nav shadow-lg shadow-black/30' : 'bg-transparent border-b border-transparent'}`}>
       <nav className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
         {/* Logo */}
         <Link href="#" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center font-bold text-white group-hover:shadow-lg group-hover:shadow-blue-500/50 transition-all duration-300">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 flex items-center justify-center font-bold text-white shadow-lg shadow-purple-500/30 group-hover:shadow-purple-500/60 group-hover:scale-110 transition-all duration-300">
             H
           </div>
-          <span className="font-semibold text-lg hidden sm:block">
-            Harshil<span className="text-blue-400">.</span>
+          <span className="font-bold text-lg hidden sm:block">
+            Harshil<span className="gradient-text-cyan-purple">.</span>
           </span>
         </Link>
 
@@ -62,14 +62,14 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={`relative text-sm font-medium transition-colors duration-300 ${
-                  isActive ? 'text-blue-400' : 'text-slate-300 hover:text-white'
+                  isActive ? 'text-cyan-400' : 'text-slate-300 hover:text-white'
                 }`}
                 whileHover={{ y: -2 }}
               >
                 {link.label}
                 {isActive && (
                   <motion.div
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500"
                     layoutId="activeNav"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
@@ -83,7 +83,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <a
             href="#contact"
-            className="hidden sm:inline-flex px-4 py-2 rounded-lg border border-slate-700 hover:border-slate-600 text-slate-300 hover:text-white transition-all duration-300 text-sm font-medium"
+            className="hidden sm:inline-flex px-4 py-2 rounded-xl btn-gradient-cyan text-sm font-semibold transition-all duration-300"
           >
             Get in Touch
           </a>
@@ -100,21 +100,21 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-slate-800/50 bg-slate-950">
+        <div className="md:hidden border-t border-white/5 glass-nav">
           <div className="px-6 py-4 flex flex-col gap-3">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-slate-300 hover:text-white transition-colors duration-300 text-sm font-medium py-2"
+                className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 text-sm font-medium py-2"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="#contact"
-              className="mt-2 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white transition-colors duration-300 text-sm font-medium text-center"
+              className="mt-2 px-4 py-2 rounded-xl btn-gradient-cyan text-sm font-semibold text-center"
             >
               Get in Touch
             </a>

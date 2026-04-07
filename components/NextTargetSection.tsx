@@ -52,7 +52,7 @@ export default function NextTargetSection() {
                 <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 rounded-xl blur-lg transition-opacity duration-300" 
                      style={{ backgroundImage: `linear-gradient(to bottom right, var(--tw-gradient-stops))` }} />
                 
-                <div className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 group-hover:border-slate-600 rounded-xl p-6 transition-all duration-300 hover:shadow-lg">
+                <div className="relative bg-slate-900/40 backdrop-blur-xl border border-white/8 group-hover:border-white/15 rounded-xl p-6 transition-all duration-300 hover:shadow-lg glass-card">
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${target.color} p-2 mb-4 group-hover:scale-110 transition-transform`}>
                     <Icon className="w-full h-full text-white" />
                   </div>

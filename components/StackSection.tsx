@@ -70,10 +70,7 @@ export default function StackSection() {
           {stacks.map((stack, idx) => (
             <div
               key={idx}
-              className={`group relative p-6 rounded-2xl border border-slate-700/50 bg-gradient-to-br ${stack.color} ${stack.borderColor} backdrop-blur-sm transition-all duration-500 hover:border-opacity-60 hover:shadow-lg overflow-hidden`}
-              style={{
-                boxShadow: 'var(--tw-shadow)',
-              }}
+              className={`reveal reveal-delay-${idx + 1} group relative p-6 glass-card bg-gradient-to-br ${stack.color} overflow-hidden`}
             >
               {/* Hover gradient effect */}
               <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${stack.color} -z-10 rounded-2xl`} />

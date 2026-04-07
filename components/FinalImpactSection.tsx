@@ -65,9 +65,9 @@ export default function FinalImpactSection() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 + idx * 0.1 }}
-                  className="p-6 rounded-xl border border-slate-700/50 bg-gradient-to-br from-slate-800/30 to-slate-900/30 backdrop-blur-sm hover:border-blue-400/50 transition-all duration-300"
+                  className="reveal glass-card p-6 bg-gradient-to-br from-slate-800/30 to-slate-900/30 hover:glow-purple"
                 >
-                  <div className="text-xl font-bold text-blue-400 mb-2">👉 {item.label}</div>
+                  <div className="text-xl font-bold gradient-text-cyan-purple mb-2">👉 {item.label}</div>
                   <p className="text-sm text-slate-400">{item.desc}</p>
                 </motion.div>
               ))}

@@ -27,8 +27,8 @@ export default function DomainsSection() {
       <div className="max-w-7xl mx-auto space-y-12">
         
         {/* Section Header */}
-        <div className="space-y-6 text-center">
-          <div className="text-sm font-bold text-blue-400 uppercase tracking-widest">
+        <div className="space-y-6 text-center reveal">
+          <div className="text-sm font-bold text-cyan-400 uppercase tracking-widest">
             What I'm Building Towards
           </div>
           <h2 className="text-5xl md:text-6xl font-black">
@@ -42,9 +42,8 @@ export default function DomainsSection() {
           {domains.map((domain, idx) => (
             <article
               key={idx}
-              className={`group relative p-8 rounded-2xl border border-slate-700/50 bg-gradient-to-br ${domain.color} backdrop-blur-sm transition-all duration-500 cursor-pointer overflow-hidden ${domain.hover}`}
+              className={`reveal reveal-delay-${(idx % 4) + 1} group relative p-8 rounded-2xl glass-card bg-gradient-to-br ${domain.color} overflow-hidden cursor-pointer`}
             >
-              
               {/* Animated background */}
               <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${domain.color} rounded-2xl -z-10`} />
 
@@ -59,7 +58,7 @@ export default function DomainsSection() {
                   {domain.tags?.map((tag: string, i: number) => (
                     <span
                       key={i}
-                      className="px-3 py-1 text-xs font-medium rounded-full bg-slate-800/50 text-slate-300 border border-slate-700/50"
+                      className="px-3 py-1 text-xs font-medium rounded-full glass text-slate-300 border-0"
                     >
                       {tag}
                     </span>

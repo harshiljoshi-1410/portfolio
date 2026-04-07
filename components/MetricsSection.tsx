@@ -38,9 +38,9 @@ export default function MetricsSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.15, duration: 0.6 }}
-              className="p-8 rounded-2xl border border-slate-700/50 bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm hover:border-blue-400/50 transition-all duration-300"
+              className="reveal glass-card p-8 bg-gradient-to-br from-slate-800/30 to-slate-900/30 hover:glow-cyan"
             >
-              <div className="text-4xl font-bold text-blue-400 mb-2">{item.count}</div>
+              <div className="text-4xl font-black gradient-text mb-2">{item.count}</div>
               <h3 className="text-lg font-semibold text-white mb-2">{item.label}</h3>
               <p className="text-sm text-slate-400">{item.description}</p>
             </motion.div>

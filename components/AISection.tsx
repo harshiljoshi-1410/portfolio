@@ -7,7 +7,7 @@ export default function AISection() {
     <section id="ai" className="py-24 px-6 bg-gradient-to-b from-slate-900/50 to-slate-950">
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Section Header */}
-        <div className="space-y-6">
+        <div className="space-y-6 reveal">
           <div className="text-sm font-bold text-pink-400 uppercase tracking-widest">Intelligent Systems</div>
           <h2 className="text-5xl md:text-6xl font-black">
             <span className="neon-purple">Systems that</span>
@@ -22,11 +22,11 @@ export default function AISection() {
 
         {/* Main AI Card */}
         <motion.div 
-          className="relative p-8 md:p-12 rounded-2xl border border-slate-700/50 bg-gradient-to-br from-purple-500/10 via-slate-900 to-blue-500/10 backdrop-blur-sm transition-all duration-500 hover:border-purple-400/60 hover:shadow-lg hover:shadow-purple-500/20 overflow-hidden"
+          className="reveal relative p-8 md:p-12 rounded-2xl glass-card bg-gradient-to-br from-purple-500/10 via-slate-900/80 to-blue-500/10 overflow-hidden"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          whileHover={{ scale: 1.02 }}
+          whileHover={{ scale: 1.01 }}
           viewport={{ once: true, margin: '-100px' }}
         >
           {/* Background accent */}
